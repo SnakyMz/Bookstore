@@ -26,19 +26,16 @@ function Books() {
     },
   ];
   return (
-    <section id="library">
-      <ul id="books">
-        {books.map((book) => (
-          <li key={book.id}>
-            <Book
-              title={book.title}
-              author={book.author}
-              progress={book.progress}
-              chapter={book.chapter}
-            />
-          </li>
-        ))}
-      </ul>
+    <section id="books">
+      {books.map((book) => (
+        <Book
+          key={book.id}
+          title={book.title}
+          author={book.author}
+          progress={book.progress}
+          chapter={book.chapter}
+        />
+      ))}
       <AddBook />
     </section>
   );
