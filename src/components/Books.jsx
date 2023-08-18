@@ -1,3 +1,5 @@
+import AddBook from "./AddBook";
+
 function Books() {
   const books = [
     {
@@ -23,36 +25,39 @@ function Books() {
     },
   ];
   return (
-    <ul id="books">
-      {books.map((book, index) => {
-        return (
-          <li key={index} id={book.id}>
-            <div className="bookDesc">
-              <h2>{book.name}</h2>
-              <h3>{book.author}</h3>
-              <div className="bookBtns">
-                <button type="button" className="Btn">Comments</button>
-                <span>|</span>
-                <button type="button" className="Btn">Edit</button>
-                <span>|</span>
-                <button type="button" className="Btn">Delete</button>
-              </div>
-              <div className="bookProgress">
-                <div className="percentage">
-                  <h2>{book.progress}%</h2>
-                  <h3>Completed</h3>
+    <section id="library">
+      <ul id="books">
+        {books.map((book, index) => {
+          return (
+            <li key={index} id={book.id}>
+              <div className="bookDesc">
+                <h3>{book.name}</h3>
+                <h4>{book.author}</h4>
+                <div className="bookBtns">
+                  <button type="button" className="Btn">Comments</button>
+                  <span>|</span>
+                  <button type="button" className="Btn">Edit</button>
+                  <span>|</span>
+                  <button type="button" className="Btn">Delete</button>
+                </div>
+                <div className="bookProgress">
+                  <div className="percentage">
+                    <h3>{book.progress}%</h3>
+                    <h4>Completed</h4>
+                  </div>
+                </div>
+                <div className="bookChapter">
+                  <h4>Current Chapter</h4>
+                  <h3>{book.chapter}</h3>
+                  <button type="button" className="Btn">Update Progress</button>
                 </div>
               </div>
-              <div className="bookChapter">
-                <h3>Current Chapter</h3>
-                <h2>{book.chapter}</h2>
-                <button type="button" className="Btn">Update Progress</button>
-              </div>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
+            </li>
+          );
+        })}
+      </ul>
+      <AddBook />
+    </section>
   );
 }
 
