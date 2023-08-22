@@ -18,7 +18,6 @@ function AddBook() {
     dispatch(addBook(book));
     setTitle('');
     setAuthor('');
-    setCategory('');
   };
   return (
     <section id="addBook">
@@ -48,10 +47,11 @@ function AddBook() {
           aria-label="category"
           onChange={(e) => setCategory(e.target.value)}
         >
+          <option value="">--Category--</option>
           <option value="Fiction">Fiction</option>
           <option value="Nonfiction">Nonfiction</option>
           <option value="Romance">Romance</option>
-          <option value="hHorror">Horror</option>
+          <option value="Horror">Horror</option>
           <option value="Biography">Biography</option>
           <option value="Fantasy">Fantasy</option>
           <option value="Comedy">Comedy</option>
