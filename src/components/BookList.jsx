@@ -13,8 +13,7 @@ function BookList() {
           id={book.id}
           title={book.title}
           author={book.author}
-          progress={book.progress}
-          chapter={book.chapter}
+          category={book.category}
         />
       ))}
       <AddBook />

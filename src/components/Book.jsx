@@ -3,36 +3,16 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/Books/booksSlice';
 
 function Book({
-  id, title, author, progress, chapter,
+  id, title, author, category,
 }) {
-  const dispactch = useDispatch();
-  const deletebook = (bookId) => {
-    dispactch(removeBook(Number(bookId)));
-  };
+  const dispatch = useDispatch();
   return (
     <div className="bookDesc">
+      <h5>{category}</h5>
       <h3>{title}</h3>
       <h4>{author}</h4>
       <div className="bookBtns">
-        <button type="button" className="Btn">Comments</button>
-        <span>|</span>
-        <button type="button" className="Btn">Edit</button>
-        <span>|</span>
-        <button type="button" className="Btn" onClick={() => deletebook(id)}>Delete</button>
-      </div>
-      <div className="bookProgress">
-        <div className="percentage">
-          <h3>
-            {progress}
-            %
-          </h3>
-          <h4>Completed</h4>
-        </div>
-      </div>
-      <div className="bookChapter">
-        <h4>Current Chapter</h4>
-        <h3>{chapter}</h3>
-        <button type="button" className="Btn">Update Progress</button>
+        <button type="button" className="Btn" onClick={() => dispatch(removeBook(id))}>Delete</button>
       </div>
     </div>
   );
@@ -42,8 +22,7 @@ Book.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  progress: PropTypes.number.isRequired,
-  chapter: PropTypes.string.isRequired,
+  category: PropTypes.number.isRequired,
 };
 
 export default Book;
