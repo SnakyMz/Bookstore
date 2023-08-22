@@ -1,8 +1,14 @@
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/Books/books';
 
 function Book({
-  title, author, progress, chapter,
+  id, title, author, progress, chapter,
 }) {
+  const dispactch = useDispatch();
+  const deletebook = (bookId) => {
+    dispactch(removeBook(Number(bookId)));
+  };
   return (
     <div className="bookDesc">
       <h3>{title}</h3>
@@ -12,7 +18,7 @@ function Book({
         <span>|</span>
         <button type="button" className="Btn">Edit</button>
         <span>|</span>
-        <button type="button" className="Btn">Delete</button>
+        <button type="button" className="Btn" onClick={() => deletebook(id)}>Delete</button>
       </div>
       <div className="bookProgress">
         <div className="percentage">
@@ -33,6 +39,7 @@ function Book({
 }
 
 Book.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
