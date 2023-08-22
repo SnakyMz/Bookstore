@@ -48,15 +48,15 @@ function AddBook() {
           aria-label="category"
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="fiction">Fiction</option>
-          <option value="nonfiction">Nonfiction</option>
-          <option value="romance">Romance</option>
-          <option value="horror">Horror</option>
-          <option value="biography">Biography</option>
-          <option value="fantasy">Fantasy</option>
-          <option value="comedy">Comedy</option>
-          <option value="thriller">Thriller</option>
-          <option value="drama">Drama</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Nonfiction">Nonfiction</option>
+          <option value="Romance">Romance</option>
+          <option value="hHorror">Horror</option>
+          <option value="Biography">Biography</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Drama">Drama</option>
         </select>
         <button type="submit">Submit</button>
       </form>
