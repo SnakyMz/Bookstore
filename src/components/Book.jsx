@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/Books/bookSlice';
+import { removeBook } from '../redux/Books/booksSlice';
 
 function Book({
   id, title, author, progress, chapter,

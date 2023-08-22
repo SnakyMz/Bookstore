@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/Books/bookSlice';
+import { addBook } from '../redux/Books/booksSlice';
 
 function AddBook() {
   const dispatch = useDispatch();
