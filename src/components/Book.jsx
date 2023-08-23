@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/Books/booksSlice';
+import { removeBook } from '../api/bookstoreApi';
 
 function Book({
   id, title, author, category,
@@ -19,10 +19,10 @@ function Book({
 }
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  category: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
