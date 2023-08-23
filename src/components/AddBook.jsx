@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/Books/booksSlice';
+import { addBook } from '../api/bookstoreApi';
 
 function AddBook() {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ function AddBook() {
   const formSubmit = (e) => {
     e.preventDefault();
     const book = {
-      id: Date.now(),
+      item_id: Date.now(),
       title,
       author,
       category,
