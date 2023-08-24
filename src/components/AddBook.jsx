@@ -21,14 +21,14 @@ function AddBook() {
   };
   return (
     <section id="addBook">
-      <h2>Add new book</h2>
+      <h2 className="newHead">Add new book</h2>
       <form onSubmit={formSubmit}>
         <input
           type="text"
           id="title"
           name="title"
           value={title}
-          placeholder="Title"
+          placeholder="Book Title"
           aria-label="title"
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -36,7 +36,7 @@ function AddBook() {
           type="text"
           id="author"
           name="author"
-          placeholder="Author"
+          placeholder="Book Author"
           value={author}
           aria-label="author"
           onChange={(e) => setAuthor(e.target.value)}
@@ -58,7 +58,7 @@ function AddBook() {
           <option value="Thriller">Thriller</option>
           <option value="Drama">Drama</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" id="submitBtn">Submit</button>
       </form>
     </section>
   );
