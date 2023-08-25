@@ -9,15 +9,17 @@ function Book({
   const dispatch = useDispatch();
   return (
     <div className="bookDesc">
-      <h5 className="cate">{category}</h5>
-      <h3 className="titl">{title}</h3>
-      <h4 className="auth">{author}</h4>
-      <div className="bookBtns">
-        <button type="button" className="Btn">Comments</button>
-        <span className="bar">|</span>
-        <button type="button" className="Btn">Edit</button>
-        <span className="bar">|</span>
-        <button type="button" className="Btn" onClick={() => dispatch(removeBook(id))}>Delete</button>
+      <div className="bookHead">
+        <h5 className="cate">{category}</h5>
+        <h3 className="titl">{title}</h3>
+        <h4 className="auth">{author}</h4>
+        <div className="bookBtns">
+          <button type="button" className="Btn">Comments</button>
+          <span className="bar">|</span>
+          <button type="button" className="Btn">Edit</button>
+          <span className="bar">|</span>
+          <button type="button" className="Btn" onClick={() => dispatch(removeBook(id))}>Delete</button>
+        </div>
       </div>
       <div className="bookProgress">
         <img src={progImg} alt="Progress" className="progImg" />

@@ -21,7 +21,7 @@ function AddBook() {
   };
   return (
     <section id="addBook">
-      <h2 className="newHead">Add new book</h2>
+      <h2 className="newHead">ADD NEW BOOK</h2>
       <form onSubmit={formSubmit}>
         <input
           type="text"
@@ -58,7 +58,7 @@ function AddBook() {
           <option value="Thriller">Thriller</option>
           <option value="Drama">Drama</option>
         </select>
-        <button type="submit" id="submitBtn">Submit</button>
+        <button type="submit" id="submitBtn">ADD BOOK</button>
       </form>
     </section>
   );
