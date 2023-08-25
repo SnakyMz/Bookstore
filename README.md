@@ -32,7 +32,7 @@
 
 # 📖 About the Project <a name="about-project"></a>
 
-**Bookstore** is a website that contains a library of books. You can add or delete a book, and you can even update a book's progress.
+**Bookstore** is a website that contains a library of books. You can add or delete a book.
 
 ## 🛠 Built With <a name="built-with"></a>
 
