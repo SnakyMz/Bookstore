@@ -35,10 +35,6 @@ nav ul {
   text-decoration: none;
 }
 
-.cat {
-  color: #888;
-}
-
 .user {
   height: 3rem;
 }
@@ -148,12 +144,13 @@ nav ul {
 }
 
 #title,
-#author {
+#author,
+#category {
   border: solid 0.1rem #e8e8e8;
   padding: 0.5rem 1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: #c4c4c4;
+  background-color: white;
   width: 100%;
   margin-bottom: 0.5rem;
 }
@@ -197,7 +194,7 @@ nav ul {
   nav {
     display: inline-flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .navs {
@@ -238,16 +235,13 @@ nav ul {
 
   form {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
     gap: 2rem;
-  }
-
-  .newHead {
-    margin-bottom: 2%;
   }
 
   #title,
   #author,
+  #category,
   #submitBtn {
     margin: 0;
     padding: 0.8rem 1rem;
