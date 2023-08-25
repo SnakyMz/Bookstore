@@ -6,14 +6,14 @@ function AddBook() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [category, setCategory] = useState('');
+
   const formSubmit = (e) => {
     e.preventDefault();
     const book = {
       item_id: Date.now(),
       title,
       author,
-      category,
+      category: 'Fiction',
     };
     dispatch(addBook(book));
     setTitle('');
@@ -41,23 +41,6 @@ function AddBook() {
           aria-label="author"
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <select
-          name="category"
-          id="category"
-          aria-label="category"
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option value="">--Category--</option>
-          <option value="Fiction">Fiction</option>
-          <option value="Nonfiction">Nonfiction</option>
-          <option value="Romance">Romance</option>
-          <option value="Horror">Horror</option>
-          <option value="Biography">Biography</option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="Comedy">Comedy</option>
-          <option value="Thriller">Thriller</option>
-          <option value="Drama">Drama</option>
-        </select>
         <button type="submit" id="submitBtn">ADD BOOK</button>
       </form>
     </section>

@@ -5,10 +5,10 @@ function Navbar() {
   return (
     <header>
       <nav>
-        <h1>Bookstore</h1>
+        <h1>Bookstore CMS</h1>
         <ul>
           <li><NavLink to="/" className="navs">BOOKS</NavLink></li>
-          <li><NavLink to="/categories" className="navs">CATEGORIES</NavLink></li>
+          <li><NavLink to="/categories" className="navs cat">CATEGORIES</NavLink></li>
         </ul>
       </nav>
       <img src={user} alt="Profile" className="user" />

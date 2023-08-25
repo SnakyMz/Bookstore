@@ -35,6 +35,10 @@ nav ul {
   text-decoration: none;
 }
 
+.cat {
+  color: #888;
+}
+
 .user {
   height: 3rem;
 }
@@ -144,8 +148,7 @@ nav ul {
 }
 
 #title,
-#author,
-#category {
+#author {
   border: solid 0.1rem #e8e8e8;
   padding: 0.5rem 1rem;
   font-family: 'Montserrat', sans-serif;
@@ -194,11 +197,11 @@ nav ul {
   nav {
     display: inline-flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .navs {
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
   }
 
@@ -235,13 +238,16 @@ nav ul {
 
   form {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     gap: 2rem;
+  }
+
+  .newHead {
+    margin-bottom: 2%;
   }
 
   #title,
   #author,
-  #category,
   #submitBtn {
     margin: 0;
     padding: 0.8rem 1rem;
