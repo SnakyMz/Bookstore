@@ -1,6 +1,6 @@
 function Categories() {
   return (
-    <div>Under Construction!</div>
+    <div className="categories">Under Construction!</div>
   );
 }
 

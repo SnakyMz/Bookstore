@@ -1,27 +1,263 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+
+* {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 10%;
+  background-color: white;
+  border-bottom: solid 0.1rem #e8e8e8;
+}
+
+h1 {
+  color: #0290ff;
+}
+
+nav ul {
+  display: inline-flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navs {
+  color: #121212;
+  text-decoration: none;
+}
+
+.cat {
+  color: #888;
+}
+
+.user {
+  height: 3rem;
+}
+
+#booklist {
+  background-color: whitesmoke;
+  padding: 5% 8%;
+}
+
+.bookDesc {
+  background-color: white;
+  margin-bottom: 10%;
+  padding: 5%;
+  border: solid 0.1rem #e8e8e8;
+  border-radius: 0.2rem;
+}
+
+.cate {
+  color: #888;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+}
+
+.titl {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.auth {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.bookBtns {
+  padding: 5% 0;
+}
+
+.Btn {
+  background-color: white;
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  color: #4386bf;
+  cursor: pointer;
+}
+
+.bar {
+  color: #e8e8e8;
+  margin: 0 1rem;
+}
+
+.bookProgress {
+  display: inline-flex;
+  align-items: center;
+}
+
+.progImg {
+  height: 5rem;
+}
+
+.perc {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.completed {
+  font-weight: 400;
+  color: #888;
+}
+
+.curChapter {
+  font-family: 'Roboto Slab', serif;
+  color: #888;
+  font-weight: 300;
+  padding-bottom: 0.5rem;
+}
+
+.Chapter {
+  font-family: 'Roboto Slab', serif;
+  color: #121212;
+  font-weight: 300;
+  padding-bottom: 0.5rem;
+}
+
+.updateBtn {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+#addBook {
+  border-top: solid 0.2rem #e8e8e8;
+  padding: 4% 0;
+}
+
+.newHead {
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+#title,
+#author {
+  border: solid 0.1rem #e8e8e8;
+  padding: 0.5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #c4c4c4;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+#submitBtn {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: white;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+
+.categories,
+.loading,
+.errorMsg {
+  font-weight: bold;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 4%;
+    background-color: whitesmoke;
+  }
+
+  #App {
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  header {
+    padding: 2% 4%;
+    font-size: 1.3rem;
+  }
+
+  nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .navs {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  #booklist {
+    padding: 4%;
+  }
+
+  .bookDesc {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr 1fr;
+    padding: 3%;
+    font-size: 1.2rem;
+    margin-bottom: 4%;
+    border-radius: 0.3rem;
+  }
+
+  .bookBtns {
+    padding-bottom: 0;
+  }
+
+  .progImg {
+    height: 8rem;
+  }
+
+  .percentage {
+    padding: 1rem 2rem 1rem 0;
+    border-right: solid 0.2rem #e8e8e8;
+    margin-right: 2rem;
+  }
+
+  .perc {
+    font-size: 2rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    gap: 2rem;
+  }
+
+  .newHead {
+    margin-bottom: 2%;
+  }
+
+  #title,
+  #author,
+  #submitBtn {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+  }
+
+  .categories,
+  .loading,
+  .errorMsg {
+    font-size: 2rem;
+  }
 }
